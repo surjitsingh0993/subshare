@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('songs', function(){
+	// dd();
+	return view('songs.add');
+});		
+
+Route::post('songs/file_upload', ['as'=>'songFileUpload','uses'=>'SongsController@uploadFile']);
